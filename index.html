@@ -12,20 +12,25 @@
 
     <h2>Préparation</h2>
     <form action="#">
-        <label for="armyA">Armée en attaque</label>
-        <input type="number" name="armyA" id="armyA" value="2" min="2" onchange="this.value = parseInt(this.value)">
-        <label for="armyA">Armée en défense</label>
-        <input type="number" name="armyB" id="armyB" value="1" min="1" onchange="this.value = parseInt(this.value)">
+        <div>
+            <label for="armyA">Armée en attaque</label>
+            <input type="number" name="armyA" id="armyA" value="10" min="2" onchange="this.value = parseInt(this.value)">
+        </div>
+        <div>
+            <label for="armyA">Armée en défense</label>
+            <input type="number" name="armyB" id="armyB" value="5" min="1" onchange="this.value = parseInt(this.value)">
+        </div>
         <button id="btnStartWar">Attaquer</button>
     </form>
 
-    <h2>Chances</h2>
+    <h2>Chances (sur 1000 combats)</h2>
     <div>Probabilités de victoire : <span id="propability"></span>%</div>
+    <div>Nombre de morts moyens : <span id="averageDeads"></span></div>
 
     <section id="livingSoldiers">
         <h2>Survivants</h2>
         <div>Armée en attaque : <span id="resultA"></span></div>
-        <div>Armée en attaque : <span id="resultB"></span></div>
+        <div>Armée en défense : <span id="resultB"></span></div>
     </section>
 </body>
 </html>
